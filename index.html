@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+    <title>The Gesture Web App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <center>
+                <h3 class="col-xs-12 col-md-12">
+                    <span>
+                        <label>&#9757;</label>
+                        <label>&#128076;</label>
+                        <label>&#128070;</label>
+                    </span>
+                    <span>
+                        Hand Gesture Recognition
+                    </span>
+                    <span>
+                        <label>&#9994;</label>
+                        <label>&#128074;</label>
+                        <label>&#128078;</label>
+                    </span>
+                </h3>
+
+                <div id="main_stuff" class="col-md-12 col-xs-12">
+                    <div id="intro" class="col-xs-12 col-md-12">
+                        <h4>
+                            Are you falling behind on modern emojis? Don't worry, we have got your back!
+                            Our all-new AI powered Web application can help you convert basic everyday hand
+                            gestures into commonly used emojis such as <span>&#9996; &#129304; &#128076;
+                                &#128077;</span>.
+                        </h4>
+                        <br>
+                        <img src="Happy.png">
+                    </div>
+                    <div id="camera" class="col-xs-12 col-md-5" style="float: left;">
+                        <button onclick="take_snapshot()">Capture</button>
+                    </div>
+                    <div id="result" class="col-xs-12 col-md-5" style="float: right;">
+                        <button onclick="check()">Check</button>
+                    </div>
+                </div>
+            </center>
+            <div id="predictions">
+                <span class="col-xs-6 result" style="border-bottom-left-radius: 10px; border-top-left-radius: 10px;">Hand Gesture</span><span id="emoji_1" class="col-xs-3 result">N/A</span><span id="emoji_2" class="col-xs-3 result" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;">N/A</span>
+            </div>
+        </div>
+    </center>
+    <script src="main.js"></script>
+</body>
